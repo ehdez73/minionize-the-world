@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+ 	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
+		
+		<!-- Optional theme -->
+		<link rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css"/>
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		
+	</head>
+<body>
+
+	<div class="container">
+		<h1 class="page-header">Minionize the world!!!</h1>	
+		
+		<div class="container-fluid">
+		  <div class="row">
+		    <div class="col-md-3">
+				<img src="../static/img/minion-carl.jpg" alt="Carl" th:src="${minionImage}" th:alt="${minionName}" height="200px" />
+				<h2 th:text="${minionName}">Carl</h2>
+		    </div>
+		    <div class="col-md-5">
+				<div th:utext="${minionIpsum}" class="lead">Minions ipsum bappleees uuuhhh tatata bala tu aaaaaah.</div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+</body>
+</html>

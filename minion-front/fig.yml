@@ -1,0 +1,23 @@
+#eureka:
+#  image: ehdez73/eureka
+#  ports:
+#   - "8761:8761"
+
+hystrix:
+  hostname: sirius-hystrix
+  image: ehdez73/hystrix
+  ports:
+   - "7979:7979"
+
+minionipsum:
+  hostname: sirius-minion-ipsum-1
+  image: ehdez73/minion-ipsum
+  ports:
+   - "8880:8880"
+
+minioncharacters:
+  hostname: sirius-minion-characters-1
+  image: ehdez73/minion-characters
+  ports:
+   - "8881:8881"
+
