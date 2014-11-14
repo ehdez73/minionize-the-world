@@ -5,7 +5,7 @@
 
 hystrix:
   hostname: sirius-hystrix
-  image: ehdez73/hystrix
+  image: ehdez73/hystrix-dashboard
   ports:
    - "7979:7979"
 
