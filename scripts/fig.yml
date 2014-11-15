@@ -1,0 +1,19 @@
+eureka:
+  hostname: sirius-eureka-server
+  image: ehdez73/eureka-server
+  ports:
+   - "8761:8761"
+
+hystrix:
+  hostname: sirius-hystrix
+  image: ehdez73/hystrix-dashboard
+  ports:
+   - "7979:7979"
+
+configserver:
+  hostname: sirius-config-server
+  image: ehdez73/config-server
+  ports:
+   - "8888:8888"
+
+

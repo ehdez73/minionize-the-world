@@ -1,0 +1,12 @@
+info:
+  description: Spring Cloud Config Server
+
+spring:
+  application:
+    name: configserver
+
+encrypt:
+  keyStore:
+    location: classpath:keystore.jks
+    password: ${KEYSTORE_PASSWORD:foobar} # foobar
+    alias: test

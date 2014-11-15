@@ -1,0 +1,19 @@
+server:
+  port: 8880
+
+spring:
+  application:
+    name: minion-ipsum
+  cloud:
+    config:
+      discovery:
+        enabled: true
+   
+   
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://Sirius:8761/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 10       
+
