@@ -8,8 +8,8 @@ spring:
   cloud:
     config:
       server:
-        uri: https://github.com/ehdez73/cloud-config
-        basedir: /tmp/config-server
+        uri: https://github.com/ehdez73/minionize-the-world-config
+        basedir: /tmp/minionize-the-world-config
           
 eureka:
   client:
