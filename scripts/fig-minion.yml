@@ -1,0 +1,18 @@
+
+minionipsum:
+  hostname: sirius-minion-ipsum
+  image: ehdez73/minion-ipsum
+  ports:
+   - "8880:8880"
+
+minioncharacters:
+  hostname: sirius-minion-characters
+  image: ehdez73/minion-characters
+  ports:
+   - "8881:8881"
+
+minionfront:
+  hostname: sirius-minion-front
+  image: ehdez73/minion-front
+  ports:
+   - "8080:8080"
