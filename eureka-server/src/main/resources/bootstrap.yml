@@ -1,6 +1,0 @@
-spring:
-  application:
-    name: eureka
-  cloud:
-    config:
-      uri: http://user:password@localhost:8888
