@@ -24,7 +24,8 @@ public class Application {
 	private Random random = new Random();
 	private String[] bananaArray = {"pepete","aaaaaah","uuuhhh","jiji","hahaha","jeje","wiiiii","bananaaaa","bappleees","potatoooo","para tú","la bodaaa","poulet tikka masala","daa","hana dul sae","belloo!","poopayee","tank yuuu!","me want bananaaa!","underweaaar","bee do bee do bee do","tulaliloo","ti aamoo!","tatata bala tu","baboiii","po kass","gelatooo","butt","chasy"};
 	
-	@RequestMapping("/")
+	
+	@RequestMapping("/minion-ipsum")
 	public String getMinionIpsum(){
 		int paragraphsNumber = random.nextInt(4) + 1;
 		StringBuffer resultText = new StringBuffer();

@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Application {
 	Logger log = LoggerFactory.getLogger(getClass());
 	
-	@RequestMapping("/")
+	@RequestMapping("/minion-character")
 	public Minion getMinion(){
 		Minion minion = Minion.random();
 		log.debug(minion.toString());

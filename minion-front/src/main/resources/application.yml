@@ -1,0 +1,9 @@
+info:
+  description: Minionize the world (FRONT)
+zuul:
+  proxy:
+    mapping: /api
+    route:
+      minion-ipsum: /minion-ipsum
+      minion-characters: /minion-character
+      

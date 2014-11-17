@@ -14,7 +14,7 @@ public class MinionCharacterService {
 
 	@HystrixCommand(fallbackMethod="getFallbackMinion")
 	public Minion getMinionCharacter(){
-		return template.getForObject("http://minion-characters", Minion.class);
+		return template.getForObject("http://minion-characters/minion-character", Minion.class);
 	}
 	
 	public Minion getFallbackMinion(){

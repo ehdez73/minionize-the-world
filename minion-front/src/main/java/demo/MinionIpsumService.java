@@ -14,7 +14,7 @@ public class MinionIpsumService {
 
 	@HystrixCommand(fallbackMethod="getFallbackText")
 	public String getMinionText(){
-		String text = template.getForObject("http://minion-ipsum", String.class);
+		String text = template.getForObject("http://minion-ipsum/minion-ipsum", String.class);
 		return format(text);
 	}
 	
