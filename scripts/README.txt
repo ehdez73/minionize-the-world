@@ -1,3 +1,8 @@
+INSTALL JCE:
+ Download the "Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files" from Oracle, and follow instructions for installation (essentially replace the 2 policy files in the JRE lib/security directory with the ones that you downloaded).
+
+
+
 Add this entries to your /etc/hosts
 
 172.17.42.1     Sirius docker0
