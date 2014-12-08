@@ -23,7 +23,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-starters</artifactId>
-				<version>1.0.0.BUILD-SNAPSHOT</version>
+				<version>1.0.0.M1</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -61,6 +61,30 @@
 		</plugins>
 	</build>
 	
+	<repositories>
+		<repository>
+			<id>spring-snapshots</id>
+			<url>http://repo.spring.io/snapshot</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<url>http://repo.spring.io/libs-milestone</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-snapshots</id>
+			<url>http://repo.spring.io/snapshot</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>spring-milestones</id>
+			<url>http://repo.spring.io/libs-milestone</url>
+		</pluginRepository>
+	</pluginRepositories>
+	<!-- 
 	<repositories>
 		<repository>
 			<id>spring-snapshots</id>
@@ -105,6 +129,7 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
+	 -->
 	
 
 </project>
