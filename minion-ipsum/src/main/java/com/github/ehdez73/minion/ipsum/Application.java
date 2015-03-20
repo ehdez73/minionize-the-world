@@ -1,4 +1,4 @@
-package demo;
+package com.github.ehdez73.minion.ipsum;
 
 import java.util.Random;
 

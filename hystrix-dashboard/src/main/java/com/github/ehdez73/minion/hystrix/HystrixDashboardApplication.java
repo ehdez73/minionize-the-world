@@ -1,6 +1,4 @@
-package hystrixdashboard;
-
-import hystrixdashboard.stream.MockStreamServlet;
+package com.github.ehdez73.minion.hystrix;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -12,6 +10,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.github.ehdez73.minion.hystrix.stream.MockStreamServlet;
 
 /**
  * Created by sgibb on 7/11/14.

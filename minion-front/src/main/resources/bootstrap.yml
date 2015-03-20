@@ -9,7 +9,6 @@ spring:
       discovery:
         enabled: true
    
-   
 eureka:
   client:
     serviceUrl:

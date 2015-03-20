@@ -1,4 +1,4 @@
-package demo;
+package com.github.ehdez73.minion.character;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

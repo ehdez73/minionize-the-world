@@ -1,4 +1,4 @@
-package demo;
+package com.github.ehdez73.minion.front;
 
 import java.io.Serializable;
 
