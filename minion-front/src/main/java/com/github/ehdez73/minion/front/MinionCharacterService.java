@@ -18,6 +18,6 @@ public class MinionCharacterService {
 	}
 	
 	public Minion getFallbackMinion(){
-		return new Minion("Evil","img/minion-evil.jpg");
+		return new Minion("Evil","img/minion-evil.png");
 	}
 }

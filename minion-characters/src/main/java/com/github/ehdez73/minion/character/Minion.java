@@ -6,14 +6,14 @@ public class Minion {
 	
 	private static Random random = new Random();
 	private static final Minion[] minions= {
-			new Minion("Carl",   "img/minion-carl.jpg"),
-			new Minion("Dave",   "img/minion-dave.jpg"),
-			new Minion("Tom",    "img/minion-tom.jpg"),
-			new Minion("Tim",    "img/minion-tim.jpg"),
-			new Minion("Kevin",  "img/minion-kevin.jpg"),
-			new Minion("Stuart", "img/minion-stuart.jpg"),
-			new Minion("Phil",   "img/minion-phil.jpg"),
-			new Minion("Wolverine", "img/minion-wolverine.jpg")
+			new Minion("Carl",   "img/minion-carl.png"),
+			new Minion("Dave",   "img/minion-dave.png"),
+			new Minion("Tom",    "img/minion-tom.png"),
+			new Minion("Tim",    "img/minion-tim.png"),
+			new Minion("Kevin",  "img/minion-kevin.png"),
+			new Minion("Stuart", "img/minion-stuart.png"),
+			new Minion("Phil",   "img/minion-phil.png"),
+			new Minion("Wolverine", "img/minion-wolverine.png")
 		};
 			
 	
