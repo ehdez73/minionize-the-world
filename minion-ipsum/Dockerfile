@@ -1,4 +1,4 @@
-FROM dockerfile/java
+FROM dockerfile/java:oracle-java8
 maintainer Ernesto Hdez, ehdez73@gmail.com
 ADD target/minion-ipsum-0.0.1-SNAPSHOT.jar /tmp/minion-ipsum.jar
 EXPOSE 8880

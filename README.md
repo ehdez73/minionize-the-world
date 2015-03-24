@@ -14,15 +14,14 @@ MicroService architecure example with Spring Cloud Netflix
  
 
 
+**Run with docker compose **
 
-**Run with Fig**
-
- Once the docker images have been created you can also run them with fig
+ Once the docker images have been created you can also run them with docker-compose
  
 ```
 
-     $ fig -f fig-base.yml up       # runs eureka, hystrix and config server
-     $ fig -f fig-minion-all.yml up # runs minion-front, minion-ipsum and minion-characters
+     $ docker-compose -f fig-base.yml up       # runs eureka, hystrix and config server
+     $ docker-compose -f fig-minion-all.yml up # runs minion-front, minion-ipsum and minion-characters
 ```
 
 ---
@@ -46,16 +45,13 @@ If you want to use DNS resolution with the microservices instances:
 
 3.  Add this entries to your /etc/hosts
 ```
-
-     172.17.42.1     Sirius docker0
-     172.17.42.1     sirius-minion-front
-     172.17.42.1     sirius-minion-ipsum
-     172.17.42.1     sirius-minion-ipsum-2
-     172.17.42.1     sirius-minion-characters
-     172.17.42.1     sirius-minion-characters-2
-     172.17.42.1     sirius-eureka-server
-     172.17.42.1     sirius-config-server
-     172.17.42.1     sirius-hystrix-dashboard
+        172.17.42.1     docker0
+        172.17.42.1     minion-eureka-server
+        172.17.42.1     minion-front
+        172.17.42.1     minion-ipsum
+        172.17.42.1     minion-characters
+        172.17.42.1     minion-config-server
+        172.17.42.1     minion-hystrix-dashboard
 ```
 
  4.  start dnsmasq

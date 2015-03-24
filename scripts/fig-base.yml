@@ -1,19 +1,20 @@
 eureka:
-  hostname: sirius-eureka-server
+  hostname: minion-eureka-server
   image: ehdez73/eureka-server
   ports:
    - "8761:8761"
 
-hystrix:
-  hostname: sirius-hystrix
-  image: ehdez73/hystrix-dashboard
-  ports:
-   - "7979:7979"
-
 configserver:
-  hostname: sirius-config-server
+  hostname: minion-config-server
   image: ehdez73/config-server
   ports:
    - "8888:8888"
+  links:
+   - eureka
 
 
+#hystrix:
+#  hostname: minion-hystrix-dashboard
+#  image: ehdez73/hystrix-dashboard
+#  ports:
+#   - "7979:7979"
