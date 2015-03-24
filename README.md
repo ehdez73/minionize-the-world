@@ -35,7 +35,8 @@ If you want to use encrypting with Spring Cloud Config
 Note: JCE is already configured in the config-server docker container.
 
 --- 
-*** Config your host file **
+***Configure your host file***
+
 If you run the applications outside Docker, you must add this entries to your /etc/hosts
 
 ```
