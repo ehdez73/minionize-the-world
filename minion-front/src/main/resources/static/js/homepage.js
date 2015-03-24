@@ -1,57 +1,27 @@
 $(document)
   .ready(function() {
 
-    var
-      changeSides = function() {
-        $('.ui.shape')
-          .eq(0)
-            .shape('flip over')
-            .end()
-          .eq(1)
-            .shape('flip over')
-            .end()
-          .eq(2)
-            .shape('flip back')
-            .end()
-          .eq(3)
-            .shape('flip back')
-            .end()
-        ;
-      },
-      validationRules = {
-        firstName: {
-          identifier  : 'email',
-          rules: [
-            {
-              type   : 'empty',
-              prompt : 'Please enter an e-mail'
-            },
-            {
-              type   : 'email',
-              prompt : 'Please enter a valid e-mail'
-            }
-          ]
-        }
-      }
-    ;
-
-    $('.ui.dropdown')
-      .dropdown({
-        on: 'hover'
+    $('.ui.button').click(function() {
+    	
+      // minion-ipsum
+      $.ajax({
+        url: "/api/ipsum/minion-ipsum",
+        context: document.body
+      }).done(function(data) {
+    	  $("#ipsum").text(data)
       })
-    ;
-
-    $('.ui.form')
-      .form(validationRules, {
-        on: 'blur'
+      
+      // minion-character
+      $.ajax({
+         url: "/api/characters/minion-character",
+         context: document.body
+      }).done(function(data) {
+    	  $("#minion-name").text(data.name);
+    	  $("#minion-image").attr("src", data.image).attr("alt", data.name);
       })
-    ;
 
-    $('.masthead .information')
-      .transition('scale in', 1000)
-    ;
 
-    setInterval(changeSides, 3000);
-
+    });
+    
   })
 ;
