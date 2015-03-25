@@ -20,9 +20,9 @@ MicroService architecure example with [Spring Cloud Netflix](http://cloud.spring
  Once the docker images have been created you can also run them with docker-compose
  
 ```
-
-     $ docker-compose -f fig-base.yml up       # runs eureka, hystrix and config server
-     $ docker-compose -f fig-minion-all.yml up # runs minion-front, minion-ipsum and minion-characters
+     $ cd scripts
+     $ docker-compose up       
+     
 ```
 
 ---
