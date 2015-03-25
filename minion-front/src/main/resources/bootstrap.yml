@@ -8,11 +8,11 @@ spring:
     config:
       discovery:
         enabled: true
-   
+
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://minion-eureka-server:8761/eureka/
+      defaultZone: http://minion.eureka.machine:8761/eureka/
   instance:
     leaseRenewalIntervalInSeconds: 10       
 

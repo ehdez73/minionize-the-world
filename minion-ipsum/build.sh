@@ -6,6 +6,6 @@ docker build --force-rm=true --tag=ehdez73/minion-ipsum .
 docker run -d \
 	-p 8880:8880 \
 	--name="minion-ipsum" \
-	--hostname="minion-ipsum" \
-	--link eureka-server:minion-eureka-server \
+	--hostname="minion.ipsum.machine" \
+	--link eureka-server:minion.eureka.machine \
 	ehdez73/minion-ipsum

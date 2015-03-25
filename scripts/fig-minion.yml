@@ -1,12 +1,12 @@
 
 minionipsum:
-  hostname: sirius-minion-ipsum
+  hostname: minion.ipsum.machine
   image: ehdez73/minion-ipsum
   ports:
    - "8880:8880"
 
 minioncharacters:
-  hostname: sirius-minion-characters
+  hostname: minion.characters.machine
   image: ehdez73/minion-characters
   ports:
    - "8881:8881"

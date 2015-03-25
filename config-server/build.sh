@@ -7,6 +7,6 @@ docker build -t ehdez73/config-server .
 docker run -d \
 	-p 8888:8888 \
 	--name="config-server" \
-	--hostname="minion-config-server" \
-	--link eureka-server:minion-eureka-server \
+	--hostname="minion.config.machine" \
+	--link eureka-server:minion.eureka.machine \
 	ehdez73/config-server

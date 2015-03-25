@@ -41,12 +41,12 @@ If you run the applications outside Docker, you must add this entries to your /e
 
 ```
         172.17.42.1     docker0
-        172.17.42.1     minion-eureka-server
-        172.17.42.1     minion-front
-        172.17.42.1     minion-ipsum
-        172.17.42.1     minion-characters
-        172.17.42.1     minion-config-server
-        172.17.42.1     minion-hystrix-dashboard
+        172.17.42.1     minion.eureka.machine
+        172.17.42.1     minion.front.machine
+        172.17.42.1     minion.ipsum.machine
+        172.17.42.1     minion.characters.machine
+        172.17.42.1     minion.config.machine
+        172.17.42.1     minion.hystrix.machine
 ```
 
 Also, if you want to use DNS resolution with the microservices instances instead of linking the docker containers:
