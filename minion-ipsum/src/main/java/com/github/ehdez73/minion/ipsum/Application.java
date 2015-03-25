@@ -22,11 +22,35 @@ public class Application {
 	private Logger log = LoggerFactory.getLogger(getClass());
 	
 	private Random random = new Random();
-	private String[] bananaArray = {"pepete","aaaaaah","uuuhhh","jiji","hahaha","jeje","wiiiii","bananaaaa","bappleees","potatoooo","para tú","la bodaaa","poulet tikka masala","daa","hana dul sae","belloo!","poopayee","tank yuuu!","me want bananaaa!","underweaaar","bee do bee do bee do","tulaliloo","ti aamoo!","tatata bala tu","baboiii","po kass","gelatooo","butt","chasy"};
+	private String[] bananaArray = {
+			"pepete","aaaaaah","uuuhhh","jiji","hahaha","jeje","wiiiii","bananaaaa","bappleees", "potatoooo","para tú",
+			"la bodaaa","poulet tikka masala","daa","hana dul sae","belloo!","poopayee","tank yuuu!", "me want bananaaa!",
+			"underweaaar","bee do bee do bee do","tulaliloo","ti aamoo!","tatata bala tu","baboiii", "po kass","gelatooo",
+			"butt","chasy"};
 	
 	
 	@RequestMapping("/minion-ipsum")
-	public String getMinionIpsum(){
+	public Message getMinionIpsum(){
+		String result = getMessageText();
+		log.debug(result);
+		return new Message(result);
+		
+	}
+	
+	@RequestMapping("/minion-ipsam")
+	public Message getMinionIpsam(){
+		String result = getMessageText()
+		.replaceAll("e", "a")
+		.replaceAll("i", "a")
+		.replaceAll("o", "a")
+		.replaceAll("ú", "á")
+		.replaceAll("u", "a");
+		log.debug(result);
+		return new Message(result);
+		
+	}
+
+	private String getMessageText() {
 		int paragraphsNumber = random.nextInt(4) + 1;
 		StringBuffer resultText = new StringBuffer();
 		for (int i=0; i< paragraphsNumber; i++) {
@@ -35,11 +59,8 @@ public class Application {
 				resultText.append("\n\n");
 			}
 		}
-		
 		String result = resultText.toString();
-		log.debug(result);
 		return result;
-		
 	}
 
     private String generateParagraph(int paragraphNumber) {
@@ -81,4 +102,19 @@ public class Application {
 	public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
+	
+	public static class Message {
+		
+		public Message(String message) {
+			super();
+			this.message = message;
+		}
+
+		private String message;
+
+		public String getMessage() {
+			return message;
+		}
+
+	}
 }

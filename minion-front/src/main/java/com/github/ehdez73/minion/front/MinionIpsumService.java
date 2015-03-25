@@ -1,9 +1,6 @@
 package com.github.ehdez73.minion.front;
 
-import java.net.URI;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -20,17 +17,42 @@ public class MinionIpsumService {
     private LoadBalancerClient loadBalancer;
 
 	@HystrixCommand(fallbackMethod="getFallbackText")
-	public String getMinionText(){
+	public Message getMinionText(){
 		
-		String text = template.getForObject("http://minion-ipsum/minion-ipsum", String.class);
-		return format(text);
+		Message minionMessage = template.getForObject("http://minion-ipsum/minion-ipsum", Message.class);
+		return new Message(format(minionMessage.getMessage()));
 	}
 	
-	public String getFallbackText(){
-		return "Ahhhhh! No banana";
+	public Message getFallbackText(){
+		return new Message("Ahhhhh! No banana");
 	}
 	
 	private String format(String text){
 		return text.replaceAll("\n", "<br/>");
+	}
+	
+	public static class Message {
+		
+		public Message() {
+			super();
+		}
+		
+		public Message(String message) {
+			super();
+			this.message = message;
+		}
+
+		private String message;
+
+		public String getMessage() {
+			return message;
+		}
+
+		public void setMessage(String message) {
+			this.message = message;
+		}
+		
+		
+		
 	}
 }

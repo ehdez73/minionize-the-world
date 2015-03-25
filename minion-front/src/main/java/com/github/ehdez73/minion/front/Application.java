@@ -14,6 +14,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.github.ehdez73.minion.front.MinionIpsumService.Message;
+
 @Configuration
 @ComponentScan
 @EnableAutoConfiguration
@@ -39,9 +41,9 @@ public class Application {
 	@RequestMapping("/")
 	public String minion(Model model){
 		Minion minion = minionCharacterService.getMinionCharacter();
-		String text = minionIpsumService.getMinionText();
+		Message message = minionIpsumService.getMinionText();
 
-		model.addAttribute("minionIpsum", text);
+		model.addAttribute("minionIpsum", message.getMessage());
 		model.addAttribute("minionName", minion.getName());
 		model.addAttribute("minionImage", minion.getImage());
 		
@@ -51,4 +53,6 @@ public class Application {
 	public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
+	
+	
 }

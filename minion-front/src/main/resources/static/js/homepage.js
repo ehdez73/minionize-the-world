@@ -11,7 +11,7 @@ $(document)
         context: document.body
       
       }).done(function(data) {
-    	  $("#ipsum").text(data)
+    	  $("#ipsum").text(data.message)
       
       }).fail(function(){
         $("#ipsum").text("Ahhhhh! No banana")
