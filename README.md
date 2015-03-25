@@ -61,4 +61,9 @@ Also, if you want to use DNS resolution with the microservices instances instead
 ``` 
      $ sudo service dnsmasq restart
 ```     
+---
+***TODO:***
+
+- [ ] ELK stack for logging.
+- [ ] Presentation slides.
 
