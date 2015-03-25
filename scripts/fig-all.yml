@@ -1,0 +1,43 @@
+eureka:
+  hostname: minion.eureka.machine
+  image: ehdez73/eureka-server
+  ports:
+   - "8761:8761"
+
+configserver:
+  hostname: minion.config.machine
+  image: ehdez73/config-server
+  ports:
+   - "8888:8888"
+  links:
+   - eureka:minion.eureka.machine
+
+minionipsum:
+  hostname: minion.ipsum.machine
+  image: ehdez73/minion-ipsum
+  ports:
+   - "8880:8880"
+  links:
+   - eureka:minion.eureka.machine
+   - configserver:minion.config.machine
+
+minioncharacters:
+  hostname: minion.characters.machine
+  image: ehdez73/minion-characters
+  ports:
+   - "8881:8881"
+  links:
+   - eureka:minion.eureka.machine
+   - configserver:minion.config.machine
+
+minionfront:
+  hostname: minion.front.machine
+  image: ehdez73/minion-front
+  ports:
+   - "8080:8080"
+  links:
+   - eureka:minion.eureka.machine
+   - configserver:minion.config.machine
+   - minionipsum:minion.ipsum.machine
+   - minioncharacters:minion.characters.machine
+
