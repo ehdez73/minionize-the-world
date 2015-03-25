@@ -30,7 +30,12 @@ public class Application {
 	
 	@Autowired
 	private MinionCharacterService minionCharacterService;
-	
+
+	@RequestMapping("/dashboard")
+	public String home() {
+		return "forward:/hystrix/index.html";
+	}
+
 	@RequestMapping("/")
 	public String minion(Model model){
 		Minion minion = minionCharacterService.getMinionCharacter();

@@ -1,6 +1,8 @@
 $(document)
   .ready(function() {
 
+    $('.ui.dropdown').dropdown();
+
     $('.ui.button').click(function() {
     	
       // minion-ipsum

@@ -8,17 +8,53 @@
   <!-- Site Properities -->
   <title>Minionize the world</title>
 
-  <link rel="stylesheet" type="text/css" href="../static/css/semantic.css" th:href="@{css/semantic.css}"></link>
+  <link rel="stylesheet" type="text/css" href="../static/css/semantic.css" th:href="@{css/semantic.min.css}"></link>
+  <link rel="stylesheet" type="text/css" href="../static/css/dropdown.css" th:href="@{css/dropdown.min.css}"></link>
   <link rel="stylesheet" type="text/css" href="../static/css/homepage.css" th:href="@{css/homepage.css}"></link>
 
   <script src="../static/js/jquery.js" th:src="@{js/jquery.js}"></script>
-  <script src="../static/js/semantic.js" th:src="@{js/semantic.js}"></script>
+  <script src="../static/js/semantic.js" th:src="@{js/semantic.min.js}"></script>
+  <script src="../static/js/dropdown.js" th:src="@{js/dropdown.min.js}"></script>
   <script src="../static/js/homepage.js" th:src="@{js/homepage.js}"></script>
 
 </head>
 <body id="home">
+  <div class="ui menu inverted ">
+    <a class="header item" href="http://minion.front.machine:8080">
+      Home
+    </a>
+    <a class="item" href="http://minion.eureka.machine:8761" target="eureka">
+      Eureka
+    </a>
+    <a class="item" href="http://minion.config.machine:8888/app/master" target="config">
+      Config-Server
+    </a>
+    <div class="ui item dropdown"> 
+      Hystrix <i class="dropdown icon"></i>
+      <div class="ui menu inverted">
+        <a class="item" href="http://minion.front.machine:8080/dashboard" target="hystrix">
+          Dashboard
+        </a>
+        <a class="item" href="http://minion.front.machine:8080/hystrix/monitor?stream=http%3A%2F%2Flocalhost%3A8080%2Fhystrix.stream" target="hystrix">
+          Hystrix
+        </a>
+
+      </div>
+    </div>
+
+    <div class="right menu">
+      <a class="header item" href="http://minion.ipsum.machine:8880/minion-ipsum" target="ipsum">
+        Minion-Ipsum
+      </a>
+      <a class="item" href="http://minion.characters.machine:8881/minion-character" target="characters">
+        Minion-Characters
+      </a>
+    </div>
+  </div>
   
   <div class="ui inverted masthead segment">
+
+
   <a href="https://github.com/ehdez73/minionize-the-world"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"/></a>
     
     <div class="ui page grid">
