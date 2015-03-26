@@ -63,7 +63,12 @@ Also, if you want to use DNS resolution with the microservices instances instead
 ```     
 ---
 ***TODO:***
-
+- [x] Eureka Server
+- [x] Config Server
+- [x] Hystrix Dashboard
+- [x] Zuul Proxy
+- [ ] Hot config reload
 - [ ] ELK stack for logging.
+- [ ] CorrelationId
 - [ ] Presentation slides.
 
