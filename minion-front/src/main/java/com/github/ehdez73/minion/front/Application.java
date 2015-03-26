@@ -32,6 +32,10 @@ public class Application {
 	
 	@Autowired
 	private MinionCharacterService minionCharacterService;
+	
+	public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
 
 	@RequestMapping("/dashboard")
 	public String home() {
@@ -49,10 +53,5 @@ public class Application {
 		
 		return "minion";
 	}
-	
-	public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-    }
-	
 	
 }

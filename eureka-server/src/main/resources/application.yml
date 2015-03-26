@@ -1,20 +1,12 @@
+info:
+  description: NetflixOSS Eureka Server
+
 server:
   port: 8761
-  
+
 spring:
   application:
     name: eureka-server
     
-management:
-  context-path: /admin
-  
-eureka:
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-  instance:
-    statusPageUrlPath: /admin/info
-    healthCheckUrlPath: /admin/health
-  server:
-    waitTimeInMsWhenSyncEmpty: 0
     
+

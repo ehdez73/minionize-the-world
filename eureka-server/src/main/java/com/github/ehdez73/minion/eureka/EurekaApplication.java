@@ -7,11 +7,10 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-@ComponentScan
+
 @Configuration
 @EnableAutoConfiguration
 @EnableEurekaServer
-@EnableEurekaClient
 public class EurekaApplication {
 
 	public static void main(String[] args) {

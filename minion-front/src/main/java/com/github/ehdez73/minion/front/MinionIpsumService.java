@@ -1,7 +1,6 @@
 package com.github.ehdez73.minion.front;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -13,12 +12,8 @@ public class MinionIpsumService {
 	@Autowired
 	private RestTemplate template;
 	
-	@Autowired
-    private LoadBalancerClient loadBalancer;
-
 	@HystrixCommand(fallbackMethod="getFallbackText")
 	public Message getMinionText(){
-		
 		Message minionMessage = template.getForObject("http://minion-ipsum/minion-ipsum", Message.class);
 		return new Message(format(minionMessage.getMessage()));
 	}

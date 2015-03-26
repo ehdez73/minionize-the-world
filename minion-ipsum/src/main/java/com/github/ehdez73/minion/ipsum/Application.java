@@ -28,6 +28,9 @@ public class Application {
 			"underweaaar","bee do bee do bee do","tulaliloo","ti aamoo!","tatata bala tu","baboiii", "po kass","gelatooo",
 			"butt","chasy"};
 	
+	public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
 	
 	@RequestMapping("/minion-ipsum")
 	public Message getMinionIpsum(){
@@ -99,9 +102,7 @@ public class Application {
 		return bananaArray[wordIndex];
 	}
 
-	public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-    }
+	
 	
 	public static class Message {
 		
