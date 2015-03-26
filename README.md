@@ -67,6 +67,7 @@ Also, if you want to use DNS resolution with the microservices instances instead
 - [x] Config Server
 - [x] Hystrix Dashboard
 - [x] Zuul Proxy
+- [ ] Encrypted properties example
 - [ ] Hot config reload
 - [ ] ELK stack for logging.
 - [ ] CorrelationId
