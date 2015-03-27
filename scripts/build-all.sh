@@ -20,6 +20,3 @@ echo -e "\e[34mCreating minion-front\e[39m"
 cd ../minion-front
 source build.sh
 
-echo -e "\e[34mCreating hystrix\e[39m"
-cd ../hystrix-dashboard
-source build.sh
