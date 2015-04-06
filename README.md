@@ -71,5 +71,6 @@ Also, if you want to use DNS resolution with the microservices instances instead
 - [ ] Hot config reload
 - [ ] ELK stack for logging.
 - [ ] CorrelationId
+- [ ] Metrics / Graphite
 - [ ] Presentation slides.
 
