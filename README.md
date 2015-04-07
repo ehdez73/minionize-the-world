@@ -70,7 +70,7 @@ Also, if you want to use DNS resolution with the microservices instances instead
 - [ ] Encrypted properties example
 - [ ] Hot config reload
 - [ ] ELK stack for logging.
-- [ ] CorrelationId
+- [ ] CorrelationId - Waiting for this [Issue](https://github.com/spring-cloud/spring-cloud-commons/issues/11)
 - [ ] Metrics / Graphite
 - [ ] Presentation slides.
 
