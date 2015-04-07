@@ -3,7 +3,7 @@ Minionize the world
 
 MicroService architecure example with [Spring Cloud Netflix](http://cloud.spring.io/spring-cloud-netflix/)  and [Docker](https://docker.com)
 
-![Minionize the world](https://github.com/ehdez73/minionize-the-world/blob/master/minionize-the-world.png)
+![Minionize the world](https://github.com/ehdez73/minionize-the-world/blob/master/screenshots/minionize-the-world.png)
 
 
 **Build and run**
