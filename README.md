@@ -67,8 +67,8 @@ Also, if you want to use DNS resolution with the microservices instances instead
 - [x] Config Server
 - [x] Hystrix Dashboard
 - [x] Zuul Proxy
-- [ ] Encrypted properties example
-- [ ] Hot config reload
+- [x] Encrypted properties example
+- [x] Hot config reload (RefreshScope)
 - [ ] ELK stack for logging.
 - [ ] CorrelationId - Waiting for this [Issue](https://github.com/spring-cloud/spring-cloud-commons/issues/11)
 - [ ] Metrics / Graphite

@@ -26,9 +26,28 @@
     <a class="item" href="http://minion.eureka.machine:8761" target="eureka">
       Eureka
     </a>
-    <a class="item" href="http://minion.config.machine:8888/app/master" target="config">
-      Config-Server
-    </a>
+    
+    
+    <div class="ui item dropdown"> 
+      Config-Server <i class="dropdown icon"></i>
+      <div class="ui menu inverted">
+	    
+	    <a class="item" href="http://minion.config.machine:8888/minion-front/master" target="config">
+	      minion-front config (default)
+	    </a>
+	    
+	    <a class="item" href="http://minion.config.machine:8888/minion-front/prod/master" target="config">
+	      minion-front config (prod)
+	    </a>
+	    
+	    <a class="item" id="refresh" href="#" target="hystrix">
+          Refresh 
+        </a>
+      </div>
+    </div>
+    
+    
+    
     <div class="ui item dropdown"> 
       Hystrix <i class="dropdown icon"></i>
       <div class="ui menu inverted">
@@ -38,7 +57,6 @@
         <a class="item" href="http://minion.front.machine:8080/hystrix/monitor?stream=http%3A%2F%2Flocalhost%3A8080%2Fhystrix.stream" target="hystrix">
           Hystrix
         </a>
-
       </div>
     </div>
 
@@ -57,9 +75,9 @@
 
   <a href="https://github.com/ehdez73/minionize-the-world"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"/></a>
     
-    <div class="ui page grid">
+	<div class="ui page grid">
       <div class="column">
-        <h1 class="ui inverted header">Minionize the World !!!</h1>
+        <h1 class="ui inverted header" th:text="${title}">Minionize the World !!!</h1>
         <img id="minion-image" src="../static/img/minion-carl.png" alt="Carl" th:src="${minionImage}" th:alt="${minionName}"  class="ui medium image" />
         
         
@@ -69,10 +87,9 @@
         
       </div>
     </div>
-  </div>
+   </div>
   
-
-   <div class="ui vertical segment">
+    <div class="ui vertical segment">
     <div class="ui stackable aligned page grid two column">
         	<div class="column">
 		        <p th:utext="${minionIpsum}" class="lead" id="ipsum">
@@ -87,23 +104,19 @@
     </div>
   </div>
 
-<!-- 
-  <div class="following bar fixed">
-    <div class="ui stackable center aligned page grid">
-      <div class="ten wide column">
-        <div class="ui one column center aligned stackable grid">
-          
-		 <div class="column">
-		 	<i class="huge inverted github icon"></i>
-            <h5 class="ui inverted header"><a href="https://github.com/ehdez73/minionize-the-world">GitHub</a></h5>
-          </div>         
-          
-        </div>
-      </div>
-      
-    </div>
-  </div>
- -->
+
+ <div class="ui modal">
+	  <i class="close icon"></i>
+	  <div class="header">
+	    Configuration Refreshed
+	  </div>
+	  <div class="content">
+	    <div class="description">
+	      Now try to reload the page. 
+	    </div>
+	  </div>
+	</div>
+  
 
 
 

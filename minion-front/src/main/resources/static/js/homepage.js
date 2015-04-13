@@ -1,5 +1,15 @@
 $(document)
   .ready(function() {
+	  
+	$('#refresh').click(function(){
+		$.ajax({
+			method: "POST",
+			url: "/refresh"
+		}).done(function(){
+		$('.ui.modal').modal('show');
+			$('.ui.modal').modal();
+		});
+	}); 
 
     $('.ui.dropdown').dropdown();
 
