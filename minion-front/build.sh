@@ -1,5 +1,5 @@
 #/bin/bash
-mvn clean package
+./gradlew clean build
 docker stop minion-front
 docker rm minion-front
 docker build --force-rm=true --tag=ehdez73/minion-front .

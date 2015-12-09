@@ -1,5 +1,5 @@
 #/bin/bash
-mvn package
+./gradlew build
 docker stop eureka-server
 docker rm eureka-server
 docker build --force-rm=true --tag=ehdez73/eureka-server .

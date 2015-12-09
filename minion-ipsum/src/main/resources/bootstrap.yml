@@ -7,11 +7,12 @@ spring:
   cloud:
     config:
       discovery:
+        serviceId: config-server
         enabled: true
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://minion.eureka.machine:8761/eureka/
+      defaultZone: ${EUREKA_SERVICE:http://minion.eureka.machine:8761/eureka/}
   instance:
-    leaseRenewalIntervalInSeconds: 10       
-
+    leaseRenewalIntervalInSeconds: 10 
+    preferIpAddress: true

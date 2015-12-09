@@ -3,7 +3,7 @@ info:
 
 spring:
   application:
-    name: configserver
+    name: config-server
 
 encrypt:
   keyStore:
