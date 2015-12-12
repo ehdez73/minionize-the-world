@@ -12,7 +12,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_SERVICE:http://minion.eureka.machine:8761/eureka/}
+      defaultZone: ${EUREKA_SERVICE_URL:http://minion.eureka.machine:8761/eureka/}
   instance:
     leaseRenewalIntervalInSeconds: 10 
     preferIpAddress: true

@@ -7,6 +7,5 @@ server:
 spring:
   application:
     name: eureka-server
-    
-    
+
 
